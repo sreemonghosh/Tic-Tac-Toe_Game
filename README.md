@@ -42,10 +42,6 @@ gridlock-tictactoe/
 └── README.md                    # You are here
 ```
 
-## 📱 Download the Android App
-
-**A packaged Android build is included in this repository:-**    app-release.apk
-
 ## 🚀 Running It Locally (Web)
 
 No installation or build tools required.
@@ -66,3 +62,77 @@ python3 -m http.server 8000
 # OR serve with Node
 npx serve .
 ```
+
+## 📱 Download the Android App
+
+**A packaged Android build is included in this repository:-**    app-release.apk
+
+**How to install**
+Download the .apk file from the release/ folder above (or from the Releases page, if published there).
+On your Android device, open the downloaded file.
+If prompted, allow installation from this source **(Settings → Security → Install unknown apps)** — this is required by Android for any app installed outside the Play Store.
+Tap **Install**, then open **GRIDLOCK** from your app drawer.
+
+***⚠️ Note: This APK is unsigned/self-distributed and not published on the Google Play Store, so Android will show an "unknown source" warning — this is expected and safe for a personal/open-source project.***
+
+**How the app is built**
+
+The Android app is a WebView wrapper around this same HTML/CSS/JS project — it packages the web app so it runs as a standalone installable app with its own icon, splash behavior, and offline access, without rewriting any game logic natively. The web version above and the Android app are functionally identical.
+
+## 🕹️ How to Play
+
+1. Launch the app — the animated **GRIDLOCK** logo plays briefly on startup.
+2. From the menu, choose a mode:
+   - **Player vs Player** — starts immediately.
+   - **Player vs Computer** — pick a difficulty (**Easy** or **Unbeatable**) before the round starts.
+3. Player **X** always goes first. Tap/click any empty cell to place your mark.
+4. The scoreboard at the top tracks wins for **X**, wins for **O (or Computer)**, and draws.
+5. Use **New Round** to replay with the same scoreboard, or **Reset Score** to start a fresh match. ← **Menu** returns you to mode selection at any time.
+
+## 🧠 How the Unbeatable AI Works
+
+The "Unbeatable" difficulty uses the **minimax algorithm**, a classic decision-making technique from game theory:
+
+- On every computer turn, the AI simulates **all possible remaining games** from the current board state, alternating between the computer trying to maximize its outcome and the human player trying to minimize it.
+- Each simulated game is scored: a computer win scores positively, a human win scores negatively, and a draw scores zero — with faster wins/slower losses weighted slightly higher via move depth.
+- The AI then picks the move that leads to the best guaranteed outcome, assuming the opponent also plays optimally.
+- Because Tic Tac Toe is a "solved" game with a small search space (at most 9 moves), minimax can fully explore every possible game in milliseconds — which is why this difficulty **never loses**, and can only be drawn against with perfect play.
+
+The **Easy** difficulty intentionally weakens this: most of the time it picks a random empty cell instead of running minimax, making it beatable while still occasionally playing a smart move.
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Markup | HTML5 |
+| Styling | CSS3 (custom properties, Grid, keyframe animations, `prefers-reduced-motion` support) |
+| Logic | Vanilla JavaScript (ES6+), no frameworks or libraries |
+| AI | Minimax algorithm (implemented from scratch) |
+| Fonts | Space Grotesk, Inter, JetBrains Mono — via Google Fonts |
+| Android packaging | WebView app wrapper |
+
+## 🌐 Deploying to GitHub Pages
+
+You can host the web version for free directly from this repo:
+
+1. Push this project to a GitHub repository.
+2. Go to **Settings → Pages**.
+3. Under **"Build and deployment,"** set **Source** to **Deploy from a branch**.
+4. Choose the `main` branch and `/ (root)` folder, then save.
+5. Your game will be live at: `https://<your-username>.github.io/<repo-name>/`
+
+## 🤝 Contributing
+
+Contributions, bug reports, and feature suggestions are welcome.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -m "Add my feature"`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Open a Pull Request
+
+Ideas for future improvements: sound effects, online multiplayer, light/dark theme toggle, win-streak tracking, and custom board sizes.
+
+## 📄 License
+
+This project is released under the **MIT License** — free to use, modify, and distribute. See the `LICENSE` file for details (add one to the repo if it isn't present yet).
