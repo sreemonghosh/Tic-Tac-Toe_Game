@@ -22,12 +22,21 @@ The game is a single lightweight front-end project (no backend, no database, no 
 - **Zero dependencies** — no npm install, no build step, no frameworks; just open the HTML file
 - **Android app** — the same game wrapped as an installable .apk for Android devices
 
+## 📁 Project Structure
+
+```text
 gridlock-tictactoe/
-├── index.html                    # App markup (splash, menu, game screens)
-├── style.css                     # All styling, layout, and animations
-├── script.js                     # Game logic, state management, and minimax AI
+│
+├── index.html                    # App markup (splash, menu, and game screens)
+├── style.css                    # All styling, layout, and animations
+├── script.js                    # Game logic, state management, and
+│                                # minimax AI
+│
 ├── assets/
-│   └── logo.png                  # App logo / icon (used in splash screen & README)
+│   └── logo.png                 # App logo / icon (used in splash screen
+│                                # & README)
+│
 ├── release/
-│   └── gridlock-tictactoe.apk    # Installable Android build
-└── README.md                     # You are here
+│   └── gridlock-tictactoe.apk   # Installable Android build
+│
+└── README.md                    # You are here
