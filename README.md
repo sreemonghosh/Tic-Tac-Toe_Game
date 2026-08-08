@@ -44,5 +44,4 @@ gridlock-tictactoe/
 
 ## 📱 Download the Android App
 
-**A packaged Android build is included in this repository:**
-app-release.apk
+**A packaged Android build is included in this repository:**    app-release.apk
