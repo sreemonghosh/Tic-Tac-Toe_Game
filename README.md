@@ -153,4 +153,4 @@ Ideas for future improvements: sound effects, online multiplayer, light/dark the
 
 ## 📄 License
 
-This project is released under the **MIT License** — free to use, modify, and distribute. See the `LICENSE` file for details (add one to the repo if it isn't present yet).
+This project is released under the **MIT License** — free to use, modify, and distribute. 
