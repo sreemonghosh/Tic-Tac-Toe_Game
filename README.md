@@ -56,7 +56,7 @@ No installation or build tools required.
 
 ```bash
 # Clone the repo
-git clone https://github.com/<your-username>/gridlock-tictactoe.git
+git clone https://github.com/sreemonghosh/gridlock-tictactoe.git
 cd gridlock-tictactoe
 
 # Serve with Python
