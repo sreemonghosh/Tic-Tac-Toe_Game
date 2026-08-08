@@ -44,4 +44,25 @@ gridlock-tictactoe/
 
 ## 📱 Download the Android App
 
-**A packaged Android build is included in this repository:**    app-release.apk
+**A packaged Android build is included in this repository:-**    app-release.apk
+
+## 🚀 Running It Locally (Web)
+
+No installation or build tools required.
+
+**Option 1 — Just open it:** Double-click `index.html`, or open it directly in any modern browser.
+
+**Option 2 — Serve it locally** (recommended, avoids any local file/CORS quirks):
+
+```bash
+# Clone the repo
+git clone https://github.com/<your-username>/gridlock-tictactoe.git
+cd gridlock-tictactoe
+
+# Serve with Python
+python3 -m http.server 8000
+# then open http://localhost:8000
+
+# OR serve with Node
+npx serve .
+```
