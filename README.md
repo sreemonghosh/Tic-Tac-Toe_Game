@@ -65,19 +65,22 @@ npx serve .
 
 ## 📱 Download the Android App
 
-**A packaged Android build is included in this repository:-**    app-release.apk
+A packaged Android build is included in this repository:
 
-**How to install**
-Download the .apk file from the release/ folder above (or from the Releases page, if published there).
-On your Android device, open the downloaded file.
-If prompted, allow installation from this source **(Settings → Security → Install unknown apps)** — this is required by Android for any app installed outside the Play Store.
-Tap **Install**, then open **GRIDLOCK** from your app drawer.
+`release/gridlock-tictactoe.apk`
 
-***⚠️ Note: This APK is unsigned/self-distributed and not published on the Google Play Store, so Android will show an "unknown source" warning — this is expected and safe for a personal/open-source project.***
+### How to install
 
-**How the app is built**
+1. Download the `.apk` file from the `release/` folder above (or from the [Releases](../../releases) page, if published there).
+2. On your Android device, open the downloaded file.
+3. If prompted, allow installation from this source (**Settings → Security → Install unknown apps**) — this is required by Android for any app installed outside the Play Store.
+4. Tap **Install**, then open **GRIDLOCK** from your app drawer.
 
-The Android app is a WebView wrapper around this same HTML/CSS/JS project — it packages the web app so it runs as a standalone installable app with its own icon, splash behavior, and offline access, without rewriting any game logic natively. The web version above and the Android app are functionally identical.
+> ⚠️ **Note:** This APK is unsigned/self-distributed and not published on the Google Play Store, so Android will show an "unknown source" warning — this is expected and safe for a personal/open-source project.
+
+### How the app is built
+
+The Android app is a **WebView wrapper** around this same HTML/CSS/JS project — it packages the web app so it runs as a standalone installable app with its own icon, splash behavior, and offline access, without rewriting any game logic natively. The web version above and the Android app are functionally identical.
 
 ## 🕹️ How to Play
 
