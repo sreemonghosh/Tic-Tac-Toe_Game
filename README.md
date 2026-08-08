@@ -63,6 +63,21 @@ python3 -m http.server 8000
 npx serve .
 ```
 
+## 🎮 Play GRIDLOCK TicTacToe Online
+
+### 🚀 [▶️ PLAY NOW](https://tictactoeapp-928bf9.tiiny.site)
+
+Play the complete web version of **GRIDLOCK TicTacToe** directly in your browser.
+
+- ✅ No installation required
+- ✅ Works on desktop and mobile
+- ✅ Player vs Player
+- ✅ Player vs Computer
+- ✅ Easy and Unbeatable AI
+- ✅ No download required
+
+**🔗 Live Game:** https://tictactoeapp-928bf9.tiiny.site
+
 ## 📱 Download the Android App
 
 A packaged Android build is included in this repository:
