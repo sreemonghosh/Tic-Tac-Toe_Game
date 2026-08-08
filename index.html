@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRIDLOCK — Tic Tac Toe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SPLASH -->
+  <div class="screen active" id="splash">
+    <svg viewBox="0 0 200 200">
+      <path class="logo-x" d="M55 55 L145 145 M145 55 L55 145" />
+      <circle class="logo-o" cx="100" cy="100" r="66" />
+    </svg>
+    <div class="wordmark">GRID<span>LOCK</span></div>
+    <div class="tagline">Tic&nbsp;·&nbsp;Tac&nbsp;·&nbsp;Toe</div>
+  </div>
+
+  <!-- MENU -->
+  <div class="screen" id="menu">
+    <div class="brand-row">
+      <span class="mini-x">X</span>
+      <span style="color:var(--ink-dim)">/</span>
+      <span class="mini-o">O</span>
+    </div>
+    <h1 class="title" style="margin-bottom:34px;">Choose your match</h1>
+
+    <div class="mode-stack">
+      <button class="mode-card pvp" id="pvpBtn">
+        <div class="mode-icon">X·O</div>
+        <div class="mode-text">
+          <div class="mode-title">Player vs Player</div>
+          <div class="mode-sub">TWO PLAYERS · ONE DEVICE</div>
+        </div>
+      </button>
+
+      <button class="mode-card pvc" id="pvcBtn">
+        <div class="mode-icon">⌁</div>
+        <div class="mode-text">
+          <div class="mode-title">Player vs Computer</div>
+          <div class="mode-sub">CHALLENGE THE MACHINE</div>
+        </div>
+      </button>
+
+      <div class="diff-row" id="diffRow" style="display:none;">
+        <button class="diff-btn" data-diff="easy">EASY</button>
+        <button class="diff-btn selected" data-diff="hard">UNBEATABLE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME -->
+  <div class="screen" id="game">
+    <div class="top-bar">
+      <button class="back-btn" id="backBtn">← MENU</button>
+      <div class="mode-label" id="modeLabel">PLAYER VS PLAYER</div>
+    </div>
+
+    <div class="scoreboard">
+      <div class="score-pill x-pill" id="xPill">
+        <div class="score-label">PLAYER X</div>
+        <div class="score-value" id="xScore">0</div>
+      </div>
+      <div class="score-pill draw-pill" id="dPill">
+        <div class="score-label">DRAWS</div>
+        <div class="score-value" id="dScore">0</div>
+      </div>
+      <div class="score-pill o-pill" id="oPill">
+        <div class="score-label" id="oLabel">PLAYER O</div>
+        <div class="score-value" id="oScore">0</div>
+      </div>
+    </div>
+
+    <div class="status-line" id="statusLine">Player X's turn</div>
+
+    <div class="board" id="board"></div>
+
+    <div class="controls-row">
+      <button class="ctrl-btn ghost" id="resetScoreBtn">Reset Score</button>
+      <button class="ctrl-btn primary" id="newRoundBtn">New Round</button>
+    </div>
+  </div>
+
+  <footer class="credit">GRIDLOCK · MADE WITH HTML / CSS / JS</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
